@@ -50,6 +50,13 @@ if not city:
     print("Unable to retrieve location. Exiting.")
     exit()   
 
+def check_access(user, resource, action, time, location, confidence, enforcer):
+    # perform ABAC access control check 
+    if enforcer.enforce(user, resource, action, time, location, confidence):
+        print(f"User is allowed to {action} on {resource}")
+    else:
+        print(f"User is not allowed to {action} on {resource}")
+
 def main():
 
     # check to see if gpu is configured 
@@ -87,7 +94,7 @@ def main():
             action = "access"
 
             print(f"Checking policy for {class_name}")
-            print(f"tod: {time_of_day}, location: {current_location[1]}")
+            print(f"tod: {time_of_day}, location: {current_location[1]}, confidence: {confidence:.2f}")
     
             if e.enforce(class_name, action, time_of_day, current_location[1]):
                 labels.append(f"{class_name}({confidence:.2f}) - Allowed")
