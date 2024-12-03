@@ -1,2 +1,5 @@
-p, knife, access, evening, Arroyo Grande
+p, knife, evening, Arroyo Grande, 0.82, deny
+p, knife, evening, Arroyo Grande, 0.87, allow
+p, scissors, evening, Arroyo Grande, 0.75, deny
+p, scissors, evening, Arroyo Grande, 0.3, allow
 
