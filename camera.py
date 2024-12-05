@@ -6,3 +6,4 @@ def setup_camera():
         print("Unable to access camera.")
         exit()
     return cam
+

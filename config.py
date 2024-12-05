@@ -8,6 +8,7 @@ email_pw = os.getenv("EMAIL_PASSWORD")
 sender_email = os.getenv("SENDER_EMAIL")
 recipient_email = os.getenv("RECIPIENT_EMAIL")
 
+# configures gpu if detected
 def check_gpu_config():
     gpus = tf.config.experimental.list_physical_devices('GPU')
     for gpu in gpus:

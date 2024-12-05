@@ -14,7 +14,7 @@ def send_alert(obj, confidence, current_time, current_location, snapshot_path, s
         f"Location: {current_location[1]}, {current_location[0]}"
     )
 
-    # creadting email w/ env vars
+    # creating email w/ env vars
     msg = MIMEMultipart()
     msg["From"] = sender_email
     msg["To"] = recipient_email

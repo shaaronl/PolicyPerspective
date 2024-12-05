@@ -1,5 +1,8 @@
-p, knife, evening, Arroyo Grande, 0.82, deny
-p, knife, evening, Arroyo Grande, 0.87, allow
-p, scissors, evening, Arroyo Grande, 0.75, deny
-p, scissors, evening, Arroyo Grande, 0.3, allow
+p,  0.90, cell phone, morning, San Luis Obispo, deny
+p,  0.70, cell phone, afternoon, San Luis Obispo, allow
+p,  0.70, knife, evening, Arroyo Grande, deny
+p,  0.60, knife, evening, Arroyo Grande, allow
+p,  0.85, scissors, evening, Arroyo Grande, deny
+p,  0.60, scissors, evening, Arroyo Grande, allow
+p,  0.60, scissors, morning, Arroyo Grande, allow
 
