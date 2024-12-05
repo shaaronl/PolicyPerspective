@@ -42,7 +42,6 @@ def main():
 
     while True:
         ret, frame = cap.read()
-        # Mirror the frame horizontally
         if not ret:
             print("failed to capture frame, exiting")
             break
