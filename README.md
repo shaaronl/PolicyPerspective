@@ -8,3 +8,9 @@
 - **Policy-based Decision Making**: Uses **Casbin** to enforce **ABAC** policies, evaluating object type, confidence score, and context (e.g., time, location) for decision making.
 - **Automated Alerts**: Sends alerts when certain objects (e.g., weapons) are detected based on predefined policies.
 - **Email Notifications**: Notifies specified recipients via email when a relevant object is detected.
+
+## Demo
+
+Here's a diagram of the system architecture:
+
+![System Architecture](PolicyPerspective.drawio.png)

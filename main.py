@@ -42,6 +42,8 @@ def main():
 
     while True:
         ret, frame = cap.read()
+         # Mirror the frame horizontally
+        # frame = cv2.flip(frame, 1)
         if not ret:
             print("failed to capture frame, exiting")
             break
@@ -56,9 +58,10 @@ def main():
 
         for class_id, confidence in zip(detections.class_id, detections.confidence):
             class_name = model.model.names[int(class_id)]
+            print(f"obj: {class_name}, conf : {confidence}, tiem: {time_of_day}, loc: {current_location[1]}")
             
             # check access
-            if e.enforce( confidence, class_name, time_of_day, current_location[1]):
+            if e.enforce(confidence, class_name, time_of_day, current_location[1]):
                 labels.append(f"{class_name}({confidence:.2f}) - Allowed")
             else:
                 labels.append(f"{class_name}({confidence:.2f}) - Denied")
